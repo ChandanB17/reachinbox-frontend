@@ -1,3 +1,5 @@
+# ReachInbox Assignment Web App
+
 This project is a functional web application built using the provided design and APIs. It is implemented with React.js, Tailwind CSS, Vite.js, and TypeScript, and deployed on Vercel for hosting and continuous deployment.
 
 ## Features
