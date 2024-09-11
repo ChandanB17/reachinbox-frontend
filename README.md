@@ -42,6 +42,7 @@ This project is a functional web application built using the provided design and
 3. Start the development server:
    ```bash
    npm run dev
+4. Visit the local host: http://localhost:5173.
    
 API Documentation
 For detailed API documentation: [link](https://documenter.getpostman.com/view/30630244/2sA2rCTMKr#433eb613-e405-4239-9e2d-f20485b31b27)
@@ -49,6 +50,6 @@ For detailed API documentation: [link](https://documenter.getpostman.com/view/30
 Design File
 Figma Design: [link](https://www.figma.com/design/uECxqvFhEx9dn4ZuO7wqmu/Reachinbox-Assignment?node-id=0-1&node-type=canvas&t=3wl72qKf3b3wthor-0).
 
-###Credits
+### Credits
 Created by Chandan B, a student of Sahyadri College of Engineering & Management, Mangalore.
 This project is a reflection of my growing passion for web development and problem-solving, and I hope it showcases my abilities to build efficient, user-friendly applications.
