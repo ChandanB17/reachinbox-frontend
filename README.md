@@ -48,3 +48,7 @@ For detailed API documentation: [link](https://documenter.getpostman.com/view/30
 
 Design File
 Figma Design: [link](https://www.figma.com/design/uECxqvFhEx9dn4ZuO7wqmu/Reachinbox-Assignment?node-id=0-1&node-type=canvas&t=3wl72qKf3b3wthor-0).
+
+###Credits
+Created by Chandan B, a student of Sahyadri College of Engineering & Management, Mangalore.
+This project is a reflection of my growing passion for web development and problem-solving, and I hope it showcases my abilities to build efficient, user-friendly applications.
