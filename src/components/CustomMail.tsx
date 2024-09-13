@@ -66,97 +66,92 @@ function CustomMail({ threadId, onClose }: any) {
 
   return (
     <div className="bg-gray-400/25 fixed top-0 left-0 flex justify-center items-center h-full w-full z-20">
-      <div className="bg-[#141517] w-1/2 h-4/5 rounded-lg border border-[#41464B]">
+      <div className="bg-[#141517] w-full h-auto md:w-1/2 md:h-4/5 rounded-lg border border-[#41464B]">
+        {/* Header Section */}
         <div className="flex justify-between items-center px-4 bg-[#23272C] rounded-t-lg py-2 border-b border-[#41464B]">
-          <div className="pl-4 text-sm">Reply</div>
+          <div className="pl-4 text-xs md:text-sm">Reply</div>
           <div onClick={onClose}>
-            {" "}
             {/* Close button */}
-            <RxCross2 className="text-xl cursor-pointer" />
+            <RxCross2 className="text-lg md:text-xl cursor-pointer" />
           </div>
         </div>
-        <div className="flex text-sm py-2 border-b border-[#41464B] pl-8">
-          <div className="text-[#BAB9BD]">To :</div>
+  
+        {/* Input Fields */}
+        <div className="flex flex-col md:flex-row text-xs md:text-sm py-2 border-b border-[#41464B] px-4 md:pl-8">
+          <div className="text-[#BAB9BD] mb-2 md:mb-0">To :</div>
           <input
-            className="bg-transparent ml-4"
+            className="bg-transparent md:ml-4"
             placeholder="Recipient's Email"
             name="to"
             value={replyData.to}
             onChange={handleInputChange}
           />
         </div>
-
-        <div className="flex text-sm py-2 border-b border-[#41464B] pl-8">
-          <div className="text-[#BAB9BD]">From :</div>
+  
+        <div className="flex flex-col md:flex-row text-xs md:text-sm py-2 border-b border-[#41464B] px-4 md:pl-8">
+          <div className="text-[#BAB9BD] mb-2 md:mb-0">From :</div>
           <input
-            className="bg-transparent ml-4"
+            className="bg-transparent md:ml-4"
             placeholder="Your Email"
             name="from"
             value={replyData.from}
             onChange={handleInputChange}
           />
         </div>
-
-        <div className="flex text-sm py-2 border-b border-[#41464B] pl-8">
-          <div className="text-[#BAB9BD]">Subject :</div>
+  
+        <div className="flex flex-col md:flex-row text-xs md:text-sm py-2 border-b border-[#41464B] px-4 md:pl-8">
+          <div className="text-[#BAB9BD] mb-2 md:mb-0">Subject :</div>
           <input
-            className="bg-transparent ml-4"
+            className="bg-transparent md:ml-4"
             placeholder="Subject"
             name="subject"
             value={replyData.subject}
             onChange={handleInputChange}
           />
         </div>
-
-        <div className="flex text-sm py-2 border-b border-[#41464B] px-4 pr-8 pt-8 h-2/3">
+  
+        {/* Text Area */}
+        <div className="flex text-xs md:text-sm py-2 border-b border-[#41464B] px-4 md:pr-8 md:pt-8 h-64 md:h-2/3">
           <textarea
-            className="bg-transparent ml-4 w-full h-full"
+            className="bg-transparent w-full h-full"
             placeholder="Message Body"
             name="body"
             value={replyData.body}
             onChange={handleTextAreaChange}
           />
         </div>
-
-        <div className="flex space-x-8 items-center h-16 ml-8">
+  
+        {/* Footer with Buttons and Icons */}
+        <div className="flex flex-wrap md:flex-nowrap space-y-4 md:space-y-0 space-x-0 md:space-x-8 items-center h-16 px-4 md:ml-8 py-4">
           <div
-            className="bg-gradient-to-r from-[#4B63DD] to-[#0524BFFC] px-5 py-2 rounded-md flex items-center cursor-pointer"
+            className="bg-gradient-to-r from-[#4B63DD] to-[#0524BFFC] px-4 md:px-5 py-2 rounded-md flex items-center cursor-pointer text-xs md:text-sm"
             onClick={handleSendReply}
           >
-            Send <FaCaretDown className="ml-4" />
+            Send <FaCaretDown className="ml-2 md:ml-4" />
           </div>
-          <div className="flex items-center text-[#ADADAD]">
-            <BsLightningChargeFill className="mr-3" />
-            Variables
+  
+          <div className="flex items-center text-[#ADADAD] text-xs md:text-sm">
+            <BsLightningChargeFill className="mr-1 md:mr-3" /> Variables
           </div>
-          <div className="flex items-center text-[#ADADAD]">
-            <FaEye className="mr-3" />
-            Preview Email
+  
+          <div className="flex items-center text-[#ADADAD] text-xs md:text-sm">
+            <FaEye className="mr-1 md:mr-3" /> Preview Email
           </div>
-          <div className="flex space-x-3 text-xl text-[#ADADAD]">
-            <div>
-              <TbSquareLetterA />
-            </div>
-            <div>
-              <IoLinkSharp />
-            </div>
-            <div>
-              <FaImage />
-            </div>
-            <div>
-              <FaRegSmile />
-            </div>
-            <div>
-              <FaUserMinus />
-            </div>
-            <div>
-              <IoMdCode />
-            </div>
+  
+          {/* Icons */}
+          <div className="flex space-x-3 md:space-x-6 text-lg md:text-xl text-[#ADADAD]">
+            <TbSquareLetterA />
+            <IoLinkSharp />
+            <FaImage />
+            <FaRegSmile />
+            <FaUserMinus />
+            <IoMdCode />
           </div>
         </div>
       </div>
     </div>
   );
+  
 }
 
 export default CustomMail;
